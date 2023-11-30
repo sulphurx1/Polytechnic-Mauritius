@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
@@ -44,6 +45,23 @@ void areaSquare() {
 
     cout << "The area of the square: " << area << endl;
 
+}
+
+void areaCone() {
+
+    int h;
+
+    cout << "Please enter radius: ";
+    
+    cin >> r;
+
+    cout << "Please enter the height: ";
+
+    cin >> h;
+
+    area = (pi * r) * (r + sqrt((r * r) + (h * h)));
+
+    cout << "The area of the cone: " << area << endl;
 
 }
 
@@ -58,6 +76,7 @@ int main() {
     cout << "1. Circle" << endl;
     cout << "2. Rectangle" << endl;
     cout << "3. Square" << endl;
+    cout << "4. Cone" << endl;
     cout << "Please enter choose: ";
 
     cin >> choose;
@@ -73,6 +92,11 @@ int main() {
     else if(choose == 3) {
         areaSquare();
     }
+
+    else if(choose == 4) {
+        areaCone();
+    }
+    
     else {
         cout << "Error!" << endl;
     }
